@@ -1,0 +1,41 @@
+<html>
+  <head>
+    <title>Update Quantities</title>
+    <link rel="stylesheet" href="exercises.css">
+  </head>
+  <body>
+
+    <div class="quantities">
+      <img src="assets/plush-android.jpg" width="195" height="195">
+      <br>
+
+      <button id="add">Add</button>
+      <button id="remove">Remove</button>
+      <br>
+
+      Quantity <input id="updateQuantity" type="text" value="0">
+    </div>
+
+    <script>
+      // ADD JAVASCRIPT HERE
+      var quantity = 0;
+      var updateQuantity = document.getElementById('updateQuantity');
+      var addBtn = document.getElementById("add");
+      var removeBtn = document.getElementById("remove");
+      addBtn.onclick = addItem;
+      removeBtn.onclick = removeItem;
+
+      function addItem(){
+        quantity = quantity + 1;
+        updateQuantity.value = quantity;
+      }
+
+      function removeItem(){
+        if(quantity > 0) {
+          quantity = quantity - 1;
+        }
+        updateQuantity.value = quantity;
+      }
+    </script>
+  </body>
+</html>
